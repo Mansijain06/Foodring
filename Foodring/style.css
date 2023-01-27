@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {}
+
+.app-container {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 7rem;
+
+}
+
+.nav-container>.nav-loc>img {
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.nav-container>.nav-list {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+
+.nav-container>.nav-list>li>svg {
+    height: 20px;
+}
+
+.nav-container>.nav-list>a {
+    text-decoration: none;
+    color: black;
+    margin-left: 0.5rem;
+}
+
+.nav-container>.nav-list>a>li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    text-decoration: none;
+}
+
+.nav-container>.nav-list>a>li>span {
+    padding-left: 0.5rem;
+}
+
+/* Restaurant */
+
+.restaurants-container {
+    padding: 2rem 5rem;
+}
+
+.restaurants {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.restaurants>.restaurants-sort {
+    display: flex;
+    color: rgb(85, 82, 82)
+}
+
+.restaurants>.restaurants-sort>p {
+    margin-right: 1rem;
+}
+
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Restaurant Item */
+.restaurant-item-container {
+    border: 1px solid #fff;
+    padding: 1rem;
+    margin: 1rem;
+    width: 15rem;
+}
+
+.restaurant-item-container:hover {
+    border: 1px solid rgb(224, 215, 215);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.restaurant-cuisines {
+    color: grey;
+    font-size: 12px;
+}
+
+.restaurant-item-container>img {
+    width: 15rem;
+}
+
+.restaurant-item-name {
+    padding: 0.5rem 0;
+    color: rgb(79, 82, 82);
+    font-size: 16px;
+    font-weight: normal
+}
+
+.restaurant-item-container>.restaurant-item-details {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(128, 128, 128);
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.restaurant-rating {
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.restaurant-item-container>.restaurant-item-discount {
+    display: flex;
+    align-items: center;
+    color: #8a584b;
+    font-size: 12px;
+    padding-top: 1rem;
+
+}
+
+/* restaurant menu */
+.restaurantmenu-container {
+    display: flex;
+    padding: 2rem 7rem;
+    justify-content: space-between;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .05), transparent);
+    /* text-align: center; */
+    align-items: center;
+}
+
+.restaurantmenu-container p,
+label {
+    color: rgb(136, 132, 132);
+    font-size: 14px;
+}
+
+.restaurantmenu-details {
+    padding-right: 3rem;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.restaurantmenu-container>.restaurantmenu-details-container {
+    display: flex;
+    align-items: center;
+    line-height: 2rem;
+}
+
+.restaurantmenu-details-header {
+    font-weight: 100;
+    /* padding-bottom: 1rem; */
+}
+
+.restaurantmenu-details-review {
+    display: flex;
+    align-items: end;
+}
+
+.restaurantmenu-details-review div {
+    margin-right: 4rem;
+    line-height: normal;
+}
+
+.restaurantmenu-details-review label {
+    font-size: 12px;
+}
+
+.restaurantmenu-container>.restaurantmenu-details-container>.restaurantmenu-details {}
+
+
+.restaurantmenu-container>.restaurantmenu-details-container>img {
+    height: 10rem;
+    padding-right: 3rem;
+}
+
+.restaurantmenu-details-review p {
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.restaurantmenu-container>.restaurantmenu-offer {
+    color: #000 !important;
+    width: 25%;
+
+}
+
+.restaurantmenu-offer div {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    transform: translateZ(0);
+    transition: transform .2s ease-in-out;
+    position: relative;
+}
+
+.restaurantmenu-offer div h3 {
+    position: absolute;
+    top: -13px;
+    left: -6px;
+    background-color: #fff;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.restaurantmenu-offer p {
+    padding: 1rem 0;
+    display: flex;
+    color: #000 !important;
+    font-weight: 600;
+}
+
+.restaurant-menu-container {
+    display: flex;
+    padding: 0rem 7rem;
+}
+
+.restaurant-menu-widget {
+    text-align: right;
+    padding-right: 2rem;
+    border-right: 2px solid rgb(237, 226, 226);
+
+}
+
+.restaurant-menu-item {
+    padding-left: 4rem;
+}
