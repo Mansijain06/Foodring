@@ -3,7 +3,9 @@
     margin: 0;
 }
 
-body {}
+body {
+    font-family: sans-serif;
+}
 
 .app-container {
     font-family: sans-serif;
@@ -234,10 +236,32 @@ label {
 .restaurant-menu-widget {
     text-align: right;
     padding-right: 2rem;
-    border-right: 2px solid rgb(237, 226, 226);
-
+    border-right: 1px solid rgb(237, 226, 226);
+    width: 30%;
 }
 
 .restaurant-menu-item {
-    padding-left: 4rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    padding-right: 0px;
+    border-bottom: 1px solid rgb(224, 214, 214);
+    width: 60%;
+}
+
+.restaurant-menu-item .menu-details {
+    width: 50%;
+}
+
+.restaurant-menu-item .menu-des {
+    padding-top: 1rem;
+    color: rgb(165, 159, 159);
+    font-size: 14px;
+}
+
+.restaurant-menu-item .menu-img {
+    width: 10rem;
+    height: 8rem;
+    border-radius: 0.5rem;
+    float: right;
 }
