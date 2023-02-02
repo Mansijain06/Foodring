@@ -21,7 +21,14 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 1rem 7rem;
+    /* background-color: #000; */
 
+}
+
+.nav-container h1 {
+    font-family: 'Lobster', cursive;
+    font-weight: 700;
+    font-size: 3rem;
 }
 
 .nav-container>.nav-loc>img {
@@ -41,8 +48,9 @@ a {
 
 .nav-container>.nav-list>a {
     text-decoration: none;
-    color: black;
     margin-left: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
 }
 
 .nav-container>.nav-list>a>li {
@@ -228,6 +236,11 @@ label {
     font-weight: 600;
 }
 
+.resturant-menu-navbar {
+    color: #fff;
+    background-color: black
+}
+
 .restaurant-menu-container {
     display: flex;
     padding: 0rem 7rem;
@@ -238,6 +251,8 @@ label {
     padding-right: 2rem;
     border-right: 1px solid rgb(237, 226, 226);
     width: 30%;
+    padding-top: 2rem;
+    line-height: 2rem;
 }
 
 .restaurant-menu-item {
@@ -251,10 +266,12 @@ label {
 
 .restaurant-menu-item .menu-details {
     width: 50%;
+    line-height: 1.5rem;
+
 }
 
 .restaurant-menu-item .menu-des {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     color: rgb(165, 159, 159);
     font-size: 14px;
 }
@@ -264,4 +281,110 @@ label {
     height: 8rem;
     border-radius: 0.5rem;
     float: right;
+}
+
+
+/* Search Bar */
+
+.search-container {
+    text-align: center;
+    padding-bottom: 5rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.search-container h1 {
+    font-weight: normal;
+    padding-top: 1rem;
+    /* padding: 3rem; */
+}
+
+.search-container>.search-input {
+    padding: 0.9rem 1rem;
+    width: 45%;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    border: none;
+    margin-top: 3rem;
+}
+
+/* Header */
+
+.header-container {
+    color: #fff;
+}
+
+
+/* Shimmer */
+.shimmer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    -webkit-mask: linear-gradient(-60deg, rgb(207, 191, 191) 30%, rgba(175, 164, 164, 0.333), rgb(190, 152, 152) 70%) right/350% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.5s infinite;
+
+}
+
+.shimmer-img-block {
+    height: 10rem;
+    width: 15rem;
+    background-color: rgba(168, 166, 166, 0.425);
+    margin: 2rem;
+    margin-bottom: 1rem;
+}
+
+.shimmer-text-block p {
+    height: 1.5rem;
+    width: 15rem;
+    margin: 0.5rem 2rem;
+    background-color: rgba(168, 166, 166, 0.425);
+    border-radius: 5%;
+}
+
+@keyframes shimmer {
+    100% {
+        -webkit-mask-position: left
+    }
+}
+
+/* Footer */
+.footer-container {
+    background-color: #000;
+    color: #fff;
+    padding: 3rem 7rem;
+    padding-bottom: 10rem;
+}
+
+.footer-header {
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.footer-listitem-title {
+    font-weight: 400;
+}
+
+.footer-accordian {
+    margin-bottom: 2rem;
+    background-color: rgb(37, 36, 36);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.footer-listitem-container {
+    margin-top: 1rem;
+}
+
+
+.footer-listitem::after {
+    content: " ﹒ ";
+}
+
+.footer-listitem-header {
+    display: flex;
+    justify-content: space-between;
 }
