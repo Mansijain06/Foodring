@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import { RESTAURANT_MENU_URL } from "../config";
+
 import RestaurantMenuDetailsCard from "./RestaurantMenuDetailsCard";
 import RestaurantMenuItem from "./RestaurantMenuItem";
+import NavBar from "./NavBar";
+import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
   const { id } = useParams();
@@ -27,6 +31,9 @@ const RestaurantMenu = () => {
 
   return restaurantData ? (
     <>
+      <div className="resturant-menu-navbar">
+        <NavBar />
+      </div>
       <RestaurantMenuDetailsCard restaurantData={restaurantData} />
       <RestaurantMenuItem
         menuItems={menuItems}
@@ -34,7 +41,7 @@ const RestaurantMenu = () => {
       />
     </>
   ) : (
-    <h1>Loading</h1>
+    <Shimmer />
   );
 };
 

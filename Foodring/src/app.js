@@ -3,18 +3,14 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 import "../style.css";
-
-import NavBar from "./component/NavBar";
-// import Footer from "./component/Footer";
 import ErrorComponent from "./component/ErrorComponent";
-import SearchRestaurantOrFood from "./component/SearchRestaurantOrFood";
 import Body from "./component/Body";
 import RestaurantMenu from "./component/RestaurantMenu";
+import Cart from "./component/Cart";
 
 const Applayout = () => {
   return (
     <div className="app-container">
-      <NavBar />
       <Outlet />
     </div>
   );
@@ -30,15 +26,15 @@ const routes = createBrowserRouter([
         path: "/",
         element: <Body />,
       },
-      {
-        path: "/search",
-        element: <SearchRestaurantOrFood />,
-      },
-      {
-        path: "/restaurants/:id",
-        element: <RestaurantMenu />,
-      },
     ],
+  },
+  {
+    path: "/restaurants/:id",
+    element: <RestaurantMenu />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   },
 ]);
 

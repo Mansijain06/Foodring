@@ -262,6 +262,7 @@ label {
     padding-right: 0px;
     border-bottom: 1px solid rgb(224, 214, 214);
     width: 60%;
+    align-items: center;
 }
 
 .restaurant-menu-item .menu-details {
@@ -277,27 +278,58 @@ label {
 }
 
 .restaurant-menu-item .menu-img {
-    width: 10rem;
-    height: 8rem;
     border-radius: 0.5rem;
     float: right;
+    width: 118px;
+    height: 96px;
+    -o-object-fit: cover;
 }
 
+.restaurant-menu-item>.menu-add-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 16px;
+    min-width: 7.5rem;
+    height: 7.5rem;
+    font-size: 0;
+}
+
+.menu-add-btn,
+.menu-add-btn2 {
+    position: absolute;
+    left: 20%;
+    bottom: 8%;
+    color: rgb(91, 222, 43);
+    width: 60%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ebf5dd;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.menu-add-btn2 {
+    display: flex;
+    justify-content: space-between;
+    left: 13%;
+    width: 75%;
+}
+
+.menu-add-btn2>span {}
 
 /* Search Bar */
 
 .search-container {
     text-align: center;
     padding-bottom: 5rem;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 .search-container h1 {
     font-weight: normal;
     padding-top: 1rem;
-    /* padding: 3rem; */
 }
 
 .search-container>.search-input {
