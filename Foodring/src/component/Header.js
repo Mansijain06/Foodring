@@ -1,5 +1,4 @@
 import NavBar from "./NavBar";
-import SearchRestaurantOrFood from "./SearchRestaurantOrFood";
 import BackgroundImg from "../assets/img/backgroundImg.png";
 
 const Header = () => {
@@ -9,7 +8,6 @@ const Header = () => {
       className="header-container"
     >
       <NavBar />
-      <SearchRestaurantOrFood />
     </div>
   );
 };

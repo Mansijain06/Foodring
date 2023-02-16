@@ -1,20 +1,22 @@
-import { useEffect } from "react";
-import { RESTAURANT_PRE_SEARCH_URL } from "../config";
+import { useState } from "react";
 
-const SearchRestaurantOrFood = () => {
-  const getPreSearchCards = async () => {
-    const data = await fetch(RESTAURANT_PRE_SEARCH_URL);
-    const jsonData = await data.json();
-    console.log(jsonData);
+const SearchRestaurantOrFood = ({ getFilterRestaurants }) => {
+  const [searchText, setSearchtext] = useState("");
+
+  const filterRestaurants = (e) => {
+    if (e.keyCode === 13) {
+      getFilterRestaurants(searchText);
+    }
   };
 
-  useEffect(() => {
-    // getPreSearchCards();
-  }, []);
   return (
-    <div>
-      <input placeholder="Search for restaurants and food" />
-      <h2>Popular Cuisines</h2>
+    <div className="search-container">
+      <input
+        placeholder="🔎 &nbsp;Search for restaurant, cusinie or a dish"
+        className="search-input"
+        onChange={(e) => setSearchtext(e.target.value)}
+        onKeyDown={filterRestaurants}
+      />
     </div>
   );
 };

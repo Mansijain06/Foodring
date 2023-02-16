@@ -31,6 +31,14 @@ a {
     font-size: 3rem;
 }
 
+.nav-slogan {
+    font-family: 'Lobster', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    padding: 3rem 0;
+}
+
 .nav-container>.nav-loc>img {
     height: 5rem;
     border-radius: 50%;
@@ -324,20 +332,15 @@ label {
 
 .search-container {
     text-align: center;
-    padding-bottom: 5rem;
 }
 
-.search-container h1 {
-    font-weight: normal;
-    padding-top: 1rem;
-}
 
 .search-container>.search-input {
     padding: 0.9rem 1rem;
     width: 45%;
     border-radius: 0.5rem;
     font-size: 0.8rem;
-    border: none;
+    border: 1px solid #b8b1b1;
     margin-top: 3rem;
 }
 
