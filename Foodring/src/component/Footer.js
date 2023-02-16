@@ -65,9 +65,9 @@ const Footer = () => {
     <div className="footer-container">
       <h1 className="footer-header">Explore options near me</h1>
       <div className="footer-accordian-container">
-        {exploreData.map((data) => {
+        {exploreData.map((data, index) => {
           return (
-            <div className="footer-accordian">
+            <div className="footer-accordian" key={index}>
               <div
                 className="footer-listitem-header"
                 onClick={() =>
