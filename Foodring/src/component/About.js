@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 import FoodRingImg from "../assets/img/FoodringScreen.png";
 
@@ -23,6 +24,11 @@ const About = () => {
           </p>
         </div>
       </div>
+      <div className="about-section">
+        <h1>Vision</h1>
+        <p>For food lovers who want to order food from local restaurants online, the Food Ordering System will be an Internet-based application that will accept individual or group meal orders, process payments, and trigger delivery of the prepared meals to a designated location. For Restaurant owner who wants to take and grow their business online, with low budget can start their online restaurant business and get orders from many more customers.</p>
+      </div>
+      <Footer />
     </div>
   );
 };

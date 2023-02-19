@@ -518,12 +518,12 @@ label {
 }
 
 .about-section h1 {
-
-    margin: 2rem;
+    color: #565555;
+    margin: 3rem;
 }
 
 .about-section p {
-    width: 70%;
+    width: 60%;
     margin: auto;
     margin-bottom: 4rem;
 }
