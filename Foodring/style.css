@@ -423,3 +423,51 @@ label {
     display: flex;
     justify-content: space-between;
 }
+
+.created-by-text {
+    text-align: center;
+    color: #fff;
+    font-size: large;
+}
+
+.created-by-text a {
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+}
+
+/* offer */
+.offer-head {
+    background-color: #005062;
+    display: flex;
+    padding: 3rem 8rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offer-head-text {
+    color: #fff;
+}
+
+.offer-head-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.offer-head-text p {
+    color: #eceaea;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.offer-head img {
+    height: 12rem;
+}
+
+.offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 6rem;
+}

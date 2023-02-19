@@ -62,36 +62,40 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="footer-container">
-      <h1 className="footer-header">Explore options near me</h1>
-      <div className="footer-accordian-container">
-        {exploreData.map((data, index) => {
-          return (
-            <div className="footer-accordian" key={index}>
-              <div
-                className="footer-listitem-header"
-                onClick={() =>
-                  selectedType === data.type
-                    ? setSelectedType("")
-                    : setSelectedType(data.type)
-                }
-              >
-                <h2 className="footer-listitem-title">{data.title}</h2>
-                {selectedType === data.type ? <UilAngleUp /> : <UilAngleDown />}
-              </div>
-
-              {selectedType === data.type && (
-                <div className="footer-listitem-container">
-                  {data.list.map((listItem) => (
-                    <span className="footer-listitem">{listItem}</span>
-                  ))}
+    <>
+      <div className="footer-container">
+        <h1 className="footer-header">Explore options near me</h1>
+        <div className="footer-accordian-container">
+          {exploreData.map((data, index) => {
+            return (
+              <div className="footer-accordian" key={index}>
+                <div
+                  className="footer-listitem-header"
+                  onClick={() =>
+                    selectedType === data.type
+                      ? setSelectedType("")
+                      : setSelectedType(data.type)
+                  }
+                >
+                  <h2 className="footer-listitem-title">{data.title}</h2>
+                  {selectedType === data.type ? <UilAngleUp /> : <UilAngleDown />}
                 </div>
-              )}
-            </div>
-          );
-        })}
+
+                {selectedType === data.type && (
+                  <div className="footer-listitem-container">
+                    {data.list.map((listItem) => (
+                      <span className="footer-listitem">{listItem}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        <p className="created-by-text">Created by @<a href="https://www.linkedin.com/in/mansi-jain06?original_referer=" target="_blank">MansiJain</a></p>
       </div>
-    </div>
+
+    </>
   );
 };
 

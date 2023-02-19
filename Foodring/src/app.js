@@ -7,6 +7,8 @@ import ErrorComponent from "./component/ErrorComponent";
 import Body from "./component/Body";
 import RestaurantMenu from "./component/RestaurantMenu";
 import Cart from "./component/Cart";
+import Offer from "./component/Offer";
+import Header from "./component/Header";
 
 const Applayout = () => {
   return (
@@ -15,6 +17,8 @@ const Applayout = () => {
     </div>
   );
 };
+
+
 
 const routes = createBrowserRouter([
   {
@@ -36,6 +40,10 @@ const routes = createBrowserRouter([
     path: "/cart",
     element: <Cart />,
   },
+  {
+    path: '/offer',
+    element: <Offer />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

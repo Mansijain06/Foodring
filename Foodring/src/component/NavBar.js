@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import "../../style.css";
 
@@ -7,12 +7,14 @@ import { UilQuestionCircle } from "@iconscout/react-unicons";
 import { UilUser } from "@iconscout/react-unicons";
 
 const NavBar = () => {
+  const location = useLocation();
+  // console.log(location);
   return (
     <>
       <div className="nav-container">
         <h1>Foodring</h1>
         <ul className="nav-list">
-          <Link to="">
+          <Link to="/offer">
             <li>
               <UilPercentage />
               <span>Offers</span>
@@ -35,10 +37,9 @@ const NavBar = () => {
           </Link>
         </ul>
       </div>
-      <div className="nav-slogan">
+      {location.pathname === '/' && <div className="nav-slogan">
         <h1>Discover the best food & drinks</h1>
-
-      </div>
+      </div>}
     </>
   );
 };

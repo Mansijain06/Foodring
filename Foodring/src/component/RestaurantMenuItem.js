@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RESTAURANTS_IMG_URL } from "../config";
 
 const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
-  console.log(menuItems);
+  // console.log(menuItems);
   const [isItemAdded, setIsItemAdded] = useState(0);
   return (
     <div className="restaurant-menu-container">
