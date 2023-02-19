@@ -510,3 +510,20 @@ label {
     height: 21rem;
 
 }
+
+.about-section {
+    text-align: center;
+    margin: auto;
+    line-height: 1.5rem;
+}
+
+.about-section h1 {
+
+    margin: 2rem;
+}
+
+.about-section p {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 4rem;
+}
