@@ -3,6 +3,12 @@
     margin: 0;
 }
 
+.foodring {
+    cursor: pointer;
+    color: #fff;
+}
+
+
 body {
     font-family: sans-serif;
 }
@@ -470,4 +476,37 @@ label {
     display: flex;
     flex-wrap: wrap;
     padding: 0 6rem;
+}
+
+/* About */
+
+.about-container {}
+
+
+.about-main {
+    margin: 4rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-main-text {
+    margin: 2rem;
+    width: 45%;
+    color: #565555;
+}
+
+.about-main-text h1 {
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.about-main-text p {
+    line-height: 1.5rem;
+}
+
+.about-us-img {
+    height: 21rem;
+
 }

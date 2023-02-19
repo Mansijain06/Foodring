@@ -3,16 +3,15 @@ import { Link, useLocation } from "react-router-dom";
 import "../../style.css";
 
 import { UilPercentage } from "@iconscout/react-unicons";
-import { UilQuestionCircle } from "@iconscout/react-unicons";
+import { UilInfoCircle } from '@iconscout/react-unicons'
 import { UilUser } from "@iconscout/react-unicons";
 
 const NavBar = () => {
   const location = useLocation();
-  // console.log(location);
   return (
     <>
       <div className="nav-container">
-        <h1>Foodring</h1>
+        <Link to="/"> <h1 className="foodring">Foodring</h1></Link>
         <ul className="nav-list">
           <Link to="/offer">
             <li>
@@ -20,9 +19,9 @@ const NavBar = () => {
               <span>Offers</span>
             </li>
           </Link>
-          <Link to="">
+          <Link to="/about">
             <li>
-              <UilQuestionCircle /> <span>Help</span>
+              <UilInfoCircle /> <span>About</span>
             </li>
           </Link>
           <Link to="">

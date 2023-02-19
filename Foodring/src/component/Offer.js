@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import NavBar from "./NavBar";
 import RestaurantItem from "./RestaurantItem";
+import Shimmer from "./Shimmer";
 import "../../style.css";
 
 import offerLogo from "../assets/img/offerlogo.webp";
@@ -16,8 +17,6 @@ const Offer = () => {
     const getOfferRestaurants = async () => {
         const data = await fetch(RESTAURANT_OFFER_URL);
         const json = await data.json();
-        console.log(json);
-        // console.log(json?.data?.cards);
         setRestaurants(json?.data?.cards);
     };
     return (
@@ -32,13 +31,13 @@ const Offer = () => {
                 </div>
                 <img src={offerLogo} alt="offers" />
             </div>
-            <div className="offer-container">
+            {restaurants.length ? <div className="offer-container">
                 {
                     restaurants?.map(item => {
                         return (item.cardType === "restaurant" && <RestaurantItem {...item?.data?.data} key={item?.id} />)
                     })
                 }
-            </div>
+            </div> : <Shimmer />}
         </div>
     );
 };

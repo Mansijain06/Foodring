@@ -8,7 +8,7 @@ import Body from "./component/Body";
 import RestaurantMenu from "./component/RestaurantMenu";
 import Cart from "./component/Cart";
 import Offer from "./component/Offer";
-import Header from "./component/Header";
+import About from "./component/About";
 
 const Applayout = () => {
   return (
@@ -43,6 +43,10 @@ const routes = createBrowserRouter([
   {
     path: '/offer',
     element: <Offer />
+  },
+  {
+    path: "/about",
+    element: <About />
   }
 ]);
 
