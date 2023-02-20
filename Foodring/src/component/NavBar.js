@@ -1,13 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 import "../../style.css";
-
 import { UilPercentage } from "@iconscout/react-unicons";
 import { UilInfoCircle } from '@iconscout/react-unicons'
 import { UilUser } from "@iconscout/react-unicons";
 
 const NavBar = () => {
   const location = useLocation();
+
+  const cartItems = useSelector(store => store.cart?.items);
+
   return (
     <>
       <div className="nav-container">
@@ -31,7 +34,7 @@ const NavBar = () => {
           </Link>
           <Link to="/cart">
             <li>
-              <span>Cart</span>
+              <span>Cart {`(${cartItems.length})`}</span>
             </li>
           </Link>
         </ul>

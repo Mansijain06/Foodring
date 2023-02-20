@@ -1,9 +1,19 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { RESTAURANTS_IMG_URL } from "../config";
 
 const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
-  // console.log(menuItems);
+  console.log(menuItems);
+  console.log(menuItems.length);
   const [isItemAdded, setIsItemAdded] = useState(0);
+
+  const cartItems = useSelector((store) => store.cart.items);
+
+  const handleAddItems = (prevValue) => {
+    // setIsItemAdded(prevValue - 1);
+
+  }
+
   return (
     <div className="restaurant-menu-container">
       <div className="restaurant-menu-widget">
@@ -31,7 +41,7 @@ const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
                 ) : (
                   ""
                 )}
-                {!isItemAdded && (
+                {/* {!isItemAdded && (
                   <button
                     className="menu-add-btn"
                     onClick={() => {
@@ -40,26 +50,23 @@ const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
                   >
                     ADD
                   </button>
-                )}
-                {isItemAdded && (
-                  <button className="menu-add-btn2">
-                    <span
-                      onClick={(prevValue) => {
-                        setIsItemAdded(prevValue - 1);
-                      }}
-                    >
-                      -
-                    </span>
-                    <span>1</span>
-                    <span
-                      onClick={(prevValue) => {
-                        setIsItemAdded(prevValue + 1);
-                      }}
-                    >
-                      +
-                    </span>
-                  </button>
-                )}
+                )} */}
+
+                <button className="menu-add-btn2">
+                  <span
+                    onClick={() => handleAddItems()}
+                  >
+                    -
+                  </span>
+                  <span>1</span>
+                  <span
+                    onClick={(prevValue) => {
+                      setIsItemAdded(prevValue + 1);
+                    }}
+                  >
+                    +
+                  </span>
+                </button>
               </div>
             </div>
           );
@@ -70,3 +77,7 @@ const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
 };
 
 export default RestaurantMenuItem;
+
+
+
+// {id, menudata, numberofsameitemadded}

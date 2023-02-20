@@ -9,6 +9,8 @@ import RestaurantMenu from "./component/RestaurantMenu";
 import Cart from "./component/Cart";
 import Offer from "./component/Offer";
 import About from "./component/About";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const Applayout = () => {
   return (
@@ -17,8 +19,6 @@ const Applayout = () => {
     </div>
   );
 };
-
-
 
 const routes = createBrowserRouter([
   {
@@ -41,14 +41,18 @@ const routes = createBrowserRouter([
     element: <Cart />,
   },
   {
-    path: '/offer',
-    element: <Offer />
+    path: "/offer",
+    element: <Offer />,
   },
   {
     path: "/about",
-    element: <About />
-  }
+    element: <About />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={routes} />);
+root.render(
+  <Provider store={store}>
+    <RouterProvider router={routes} />
+  </Provider>
+);

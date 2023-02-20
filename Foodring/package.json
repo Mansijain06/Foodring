@@ -24,8 +24,10 @@
   },
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
+    "@reduxjs/toolkit": "^1.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.7.0"
   }
 }
