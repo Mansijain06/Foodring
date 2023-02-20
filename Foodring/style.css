@@ -500,6 +500,7 @@ label {
 .about-main-text h1 {
     margin-bottom: 2rem;
     font-weight: 400;
+    font-size: 1.7rem;
 }
 
 .about-main-text p {
@@ -508,7 +509,6 @@ label {
 
 .about-us-img {
     height: 21rem;
-
 }
 
 .about-section {
