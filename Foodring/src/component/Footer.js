@@ -83,8 +83,8 @@ const Footer = () => {
 
                 {selectedType === data.type && (
                   <div className="footer-listitem-container">
-                    {data.list.map((listItem) => (
-                      <span className="footer-listitem">{listItem}</span>
+                    {data.list.map((listItem, index) => (
+                      <span className="footer-listitem" key={index}>{listItem}</span>
                     ))}
                   </div>
                 )}
