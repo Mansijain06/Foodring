@@ -2,7 +2,7 @@
   "name": "foodring",
   "version": "1.0.0",
   "description": "Food ordering site",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
