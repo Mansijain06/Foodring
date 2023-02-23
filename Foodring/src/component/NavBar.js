@@ -27,7 +27,7 @@ const NavBar = () => {
               <UilInfoCircle /> <span>About</span>
             </li>
           </Link>
-          <Link to="">
+          <Link to="/user">
             <li>
               <UilUser /> <span>User</span>
             </li>

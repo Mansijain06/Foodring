@@ -11,6 +11,7 @@ import Offer from "./component/Offer";
 import About from "./component/About";
 import { Provider } from "react-redux";
 import store from "./utils/store";
+import User from "./component/User";
 
 const Applayout = () => {
   return (
@@ -48,6 +49,10 @@ const routes = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
+  {
+    path: "/user",
+    element: <User />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
