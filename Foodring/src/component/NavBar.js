@@ -34,7 +34,7 @@ const NavBar = () => {
           </Link>
           <Link to="/cart">
             <li>
-              <span>Cart {`(${cartItems.length})`}</span>
+              <span>Cart {`(${Object.keys(cartItems).length})`}</span>
             </li>
           </Link>
         </ul>

@@ -315,8 +315,6 @@ label {
     left: 20%;
     bottom: 8%;
     color: rgb(91, 222, 43);
-    width: 60%;
-    padding: 0.5rem 1rem;
     border: 1px solid #ebf5dd;
     background-color: #fff;
     border-radius: 0.2rem;
@@ -329,7 +327,12 @@ label {
     display: flex;
     justify-content: space-between;
     left: 13%;
-    width: 75%;
+}
+
+.menu-add-btn2 div {
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+    align-items: center;
 }
 
 .menu-add-btn2>span {}

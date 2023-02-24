@@ -1,18 +1,24 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RESTAURANTS_IMG_URL } from "../config";
+import { addItem, removeItem } from "../utils/cartSlice";
 
 const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
-  console.log(menuItems);
-  console.log(menuItems.length);
-  const [isItemAdded, setIsItemAdded] = useState(0);
+  // console.log(menuItems);
+  // console.log(menuItems.length);
+  // const [isItemAdded, setIsItemAdded] = useState(0);
 
   const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
 
-  const handleAddItems = (prevValue) => {
-    // setIsItemAdded(prevValue - 1);
+  const dispatch = useDispatch();
 
-  }
+  const addItemHandler = (menu) => {
+    dispatch(addItem(menu));
+  };
+  const removeItemHandler = (menu) => {
+    dispatch(removeItem(menu));
+  };
 
   return (
     <div className="restaurant-menu-container">
@@ -41,31 +47,12 @@ const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
                 ) : (
                   ""
                 )}
-                {/* {!isItemAdded && (
-                  <button
-                    className="menu-add-btn"
-                    onClick={() => {
-                      setIsItemAdded(1);
-                    }}
-                  >
-                    ADD
-                  </button>
-                )} */}
-
                 <button className="menu-add-btn2">
-                  <span
-                    onClick={() => handleAddItems()}
-                  >
-                    -
-                  </span>
-                  <span>1</span>
-                  <span
-                    onClick={(prevValue) => {
-                      setIsItemAdded(prevValue + 1);
-                    }}
-                  >
-                    +
-                  </span>
+                  <div onClick={() => cartItems[menu?.id]?.["count"] && removeItemHandler(menu)}>
+                    <span>-</span>
+                  </div>
+                  <div><span>{cartItems[menu?.id]?.["count"] || 0}</span></div>
+                  <div onClick={() => addItemHandler(menu)}><span>+</span></div>
                 </button>
               </div>
             </div>
@@ -77,7 +64,3 @@ const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
 };
 
 export default RestaurantMenuItem;
-
-
-
-// {id, menudata, numberofsameitemadded}
