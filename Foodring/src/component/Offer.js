@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import RestaurantItem from "./RestaurantItem";
 import Shimmer from "./Shimmer";
@@ -18,6 +18,7 @@ const Offer = () => {
         const data = await fetch(RESTAURANT_OFFER_URL);
         const json = await data.json();
         setRestaurants(json?.data?.cards);
+        console.log(restaurants)
     };
     return (
         <div>
@@ -31,15 +32,33 @@ const Offer = () => {
                 </div>
                 <img src={offerLogo} alt="offers" />
             </div>
-            {restaurants.length ? <div className="offer-container">
-                {
-                    restaurants?.map(item => {
-                        return (item.cardType === "restaurant" && <RestaurantItem {...item?.data?.data} key={item?.id} />)
-                    })
-                }
-            </div> : <Shimmer />}
+            {restaurants.length ? (
+                <div className="offer-container">
+                    {restaurants?.map((item) => {
+                        return (
+                            item.cardType === "restaurant" && (
+                                <Link to={"/restaurants/" + item?.data?.data?.id} key={item?.data?.data?.id}>
+                                    <RestaurantItem {...item?.data?.data} />
+                                </Link>
+                            )
+                        );
+                    })}
+                </div>
+            ) : (
+                <Shimmer />
+            )}
         </div>
     );
 };
+
+// {
+//     restaurants?.map((item) => {
+//         return (
+//             <Link to={"/restaurants/" + item.data.id} key={item.data.id}>
+//                 <RestaurantItem {...item.data} />
+//             </Link>
+//         );
+//     })
+// }
 
 export default Offer;

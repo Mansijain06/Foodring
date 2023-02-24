@@ -530,16 +530,22 @@ label {
 
 
 /* checkout */
-.checkout {
+.checkout-main {
     display: flex;
+}
+
+.checkout {
     margin: 4rem 6rem;
-    justify-content: space-between;
+    width: 60%;
 }
 
 .checkout-container {
     display: flex;
     align-items: center;
     width: 50%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(208, 199, 199);
+    margin-bottom: 2rem;
 }
 
 .checkout-img {
@@ -586,6 +592,8 @@ label {
     align-items: right;
     border: 1px solid black;
     padding: 2rem;
+    margin: 4rem;
+    height: 8rem;
 }
 
 .checkout-info h4,
