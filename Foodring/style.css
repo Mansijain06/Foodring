@@ -177,8 +177,6 @@ label {
 
 .restaurantmenu-details {
     padding-right: 3rem;
-    /* display: flex; */
-    /* justify-content: space-between; */
 }
 
 .restaurantmenu-container>.restaurantmenu-details-container {
@@ -189,7 +187,6 @@ label {
 
 .restaurantmenu-details-header {
     font-weight: 100;
-    /* padding-bottom: 1rem; */
 }
 
 .restaurantmenu-details-review {
@@ -529,4 +526,69 @@ label {
     width: 60%;
     margin: auto;
     margin-bottom: 4rem;
+}
+
+
+/* checkout */
+.checkout {
+    display: flex;
+    margin: 4rem 6rem;
+    justify-content: space-between;
+}
+
+.checkout-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.checkout-img {
+    border-radius: 0.5rem;
+    width: 125px;
+    height: 100px;
+    -o-object-fit: cover;
+    margin-right: 2rem;
+
+}
+
+.checkout-btn {
+    background-color: rgb(91, 222, 43);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+
+}
+
+.checkout-amt {
+    font-weight: bolder;
+    padding: 1rem;
+    color: #00622f;
+}
+
+.checkout-head {
+    font-weight: bolder;
+}
+
+.checkout-btn span {
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+}
+
+.checkout-des {
+    margin-top: 1rem;
+}
+
+.checkout-info {
+    width: 30%;
+    align-items: right;
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+.checkout-info h4,
+.checkout-info p {
+    margin-bottom: 1rem;
 }
