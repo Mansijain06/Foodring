@@ -27,10 +27,10 @@ const Offer = () => {
             </div>
             <div className="offer-head">
                 <div className="offer-head-text">
-                    <h1>Offers for you</h1>
+                    <h1 className="offer-head-text-header">Offers for you</h1>
                     <p>Explore top deals and offers exclusively for you!</p>
                 </div>
-                <img src={offerLogo} alt="offers" />
+                <img src={offerLogo} alt="offers" className="offer-img" />
             </div>
             {restaurants.length ? (
                 <div className="offer-container">
@@ -50,15 +50,5 @@ const Offer = () => {
         </div>
     );
 };
-
-// {
-//     restaurants?.map((item) => {
-//         return (
-//             <Link to={"/restaurants/" + item.data.id} key={item.data.id}>
-//                 <RestaurantItem {...item.data} />
-//             </Link>
-//         );
-//     })
-// }
 
 export default Offer;

@@ -16,7 +16,7 @@ const Cart = () => {
       <div className="resturant-menu-navbar">
         <NavBar />
       </div>
-      <div className="checkout-main">
+      {items.length ? <div className="checkout-main">
         <div className="checkout">
           {items.map((item) => (
             <div className="checkout-container" key={item[1].id}>
@@ -48,7 +48,11 @@ const Cart = () => {
           <p>If you cancel within 60 seconds of placing your order, a 100% refund will be issued. No refund for cancellations made after 60 seconds.</p>
           <p>Avoid cancellation as it leads to food wastage.</p>
         </div>
-      </div>
+      </div> : <div className="checkout-empty-cart">
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/2xempty_cart_yfxml0" alt="empty cart" />
+        <h3>Your cart is empty</h3>
+        <p>You can go to home page to view more restaurants</p>
+      </div>}
     </div>
   );
 };

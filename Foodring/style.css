@@ -27,8 +27,6 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 1rem 7rem;
-    /* background-color: #000; */
-
 }
 
 .nav-container h1 {
@@ -44,6 +42,19 @@ a {
     text-align: center;
     padding: 3rem 0;
 }
+
+@media (max-width: 1000px) {
+    .nav-container {
+        display: block;
+        padding: 1rem 4rem;
+    }
+
+    .nav-slogan {
+        font-size: 1rem;
+    }
+}
+
+
 
 .nav-container>.nav-loc>img {
     height: 5rem;
@@ -79,6 +90,12 @@ a {
     padding-left: 0.5rem;
 }
 
+@media (max-width: 620px) {
+    .nav-container>.nav-list {
+        display: block;
+    }
+}
+
 /* Restaurant */
 
 .restaurants-container {
@@ -103,6 +120,7 @@ a {
 .restaurant-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Restaurant Item */
@@ -168,6 +186,7 @@ a {
     /* text-align: center; */
     align-items: center;
 }
+
 
 .restaurantmenu-container p,
 label {
@@ -247,9 +266,42 @@ label {
     font-weight: 600;
 }
 
+@media (max-width: 1400px) {
+    .restaurantmenu-container {
+        display: block;
+        align-items: center;
+    }
+
+    .restaurantmenu-container>.restaurantmenu-offer {
+        width: 50%;
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width: 950px) {
+    .restaurantmenu-container>.restaurantmenu-details-container {
+        display: block;
+    }
+
+    .restaurant-menu-widget {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .restaurant-menu-item {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-details {
+        width: 100%;
+    }
+}
+
 .resturant-menu-navbar {
     color: #fff;
-    background-color: black
+    background-color: black;
 }
 
 .restaurant-menu-container {
@@ -331,6 +383,8 @@ label {
     padding: 0.5rem 0.7rem;
     align-items: center;
 }
+
+
 
 .menu-add-btn2>span {}
 
@@ -478,17 +532,36 @@ label {
     padding: 0 6rem;
 }
 
+
+@media (max-width: 1250px) {
+
+    .offer-head-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .offer-head-text p {
+        font-size: 1rem;
+    }
+
+    .offer-img {
+        display: none;
+    }
+
+}
+
 /* About */
 
-.about-container {}
+.about-container {
+    width: 100%;
 
+}
+
+.about-sec {
+    margin: 3rem;
+}
 
 .about-main {
-    margin: 4rem 8rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .about-main-text {
@@ -511,22 +584,18 @@ label {
     height: 21rem;
 }
 
-.about-section {
-    text-align: center;
-    margin: auto;
-    line-height: 1.5rem;
+@media (max-width: 1225px) {
+    .about-main {
+        display: grid;
+        width: 100%;
+        place-items: center;
+    }
+
+    .about-us-img {
+        height: 10rem;
+    }
 }
 
-.about-section h1 {
-    color: #565555;
-    margin: 3rem;
-}
-
-.about-section p {
-    width: 60%;
-    margin: auto;
-    margin-bottom: 4rem;
-}
 
 
 /* checkout */
@@ -542,7 +611,7 @@ label {
 .checkout-container {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 100%;
     padding-bottom: 1rem;
     border-bottom: 1px solid rgb(208, 199, 199);
     margin-bottom: 2rem;
@@ -554,7 +623,6 @@ label {
     height: 100px;
     -o-object-fit: cover;
     margin-right: 2rem;
-
 }
 
 .checkout-btn {
@@ -593,10 +661,45 @@ label {
     border: 1px solid black;
     padding: 2rem;
     margin: 4rem;
-    height: 8rem;
+    height: fit-content;
 }
 
 .checkout-info h4,
 .checkout-info p {
     margin-bottom: 1rem;
+}
+
+
+.checkout-empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    line-height: 2rem;
+    margin-top: 15%;
+}
+
+.checkout-empty-cart img {
+    height: 15rem;
+    width: 15rem;
+}
+
+@media (max-width: 1225px) {
+    .checkout-main {
+        display: block;
+    }
+
+    .checkout-info {
+        width: 60%;
+    }
+
+    .checkout-container {
+        flex-direction: column-reverse;
+        align-items: normal;
+    }
+
+    .checkout-img {
+        margin-top: 2rem;
+    }
 }

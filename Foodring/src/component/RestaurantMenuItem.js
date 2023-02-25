@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RESTAURANTS_IMG_URL } from "../config";
 import { addItem, removeItem } from "../utils/cartSlice";
+import "../../style.css"
 
 const RestaurantMenuItem = ({ menuItems, menuItemWidget }) => {
   // console.log(menuItems);

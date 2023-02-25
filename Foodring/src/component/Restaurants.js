@@ -38,12 +38,12 @@ const Restaurants = () => {
       <div className="restaurants-container">
         <div className="restaurants">
           <h2>{restaurants.length} restaurants</h2>
-          <div className="restaurants-sort">
+          {/* <div className="restaurants-sort">
             {sorts?.map((sort, index) => {
               return <p key={index}>{sort.title}</p>;
             })}
             <p>Filter</p>
-          </div>
+          </div> */}
         </div>
         <div className="restaurant-container">
           {restaurants?.map((item) => {
