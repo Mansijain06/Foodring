@@ -37,7 +37,7 @@ const Restaurants = () => {
       <SearchRestaurantOrFood getFilterRestaurants={getFilterRestaurants} />
       <div className="restaurants-container">
         <div className="restaurants">
-          <h2>{restaurants.length} restaurants</h2>
+          {/* <h2>{restaurants.length} restaurants</h2> */}
           {/* <div className="restaurants-sort">
             {sorts?.map((sort, index) => {
               return <p key={index}>{sort.title}</p>;
