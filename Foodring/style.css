@@ -703,3 +703,36 @@ label {
         margin-top: 2rem;
     }
 }
+
+.author-container {
+    border: 1px solid black;
+    height: fit-content;
+    width: fit-content;
+    padding: 2rem;
+    margin: auto;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.author-container h1,
+.author-container h3 {
+    color: #4c504e;
+    margin-bottom: 1rem;
+}
+
+.author-container p {
+    display: flex;
+    align-items: center;
+}
+
+.author-container svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.author-container p a {
+    margin: 0 1rem;
+    color: #005062;
+    border-bottom: 1px solid #005062;
+}

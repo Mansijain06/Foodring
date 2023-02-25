@@ -11,7 +11,7 @@ import Offer from "./component/Offer";
 import About from "./component/About";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-import User from "./component/User";
+import Author from "./component/Author";
 
 const Applayout = () => {
   return (
@@ -50,8 +50,8 @@ const routes = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/user",
-    element: <User />
+    path: "/author",
+    element: <Author />
   }
 ]);
 
