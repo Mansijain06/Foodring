@@ -13,7 +13,7 @@ const RestaurantMenuDetailsCard = ({ restaurantData }) => {
           <h1 className="restaurantmenu-details-header">
             {restaurantData?.name}
           </h1>
-          <p>{restaurantData?.cuisines.join(", ")}</p>
+          <p>{restaurantData?.cuisines?.join(", ")}</p>
           <p>{restaurantData?.area}</p>
           <div className="restaurantmenu-details-review">
             <div>

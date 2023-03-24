@@ -21,9 +21,9 @@ const Cart = () => {
           {items.map((item) => (
             <div className="checkout-container" key={item[1].id}>
               <div className="">
-                {item[1]?.cloudinaryImageId && (
+                {item[1]?.imageId && (
                   <img
-                    src={RESTAURANTS_IMG_URL + item[1]?.cloudinaryImageId}
+                    src={RESTAURANTS_IMG_URL + item[1]?.imageId}
                     className="checkout-img"
                   />
                 )}

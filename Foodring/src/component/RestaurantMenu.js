@@ -17,13 +17,15 @@ const RestaurantMenu = () => {
   const getRestaurantData = async () => {
     const data = await fetch(RESTAURANT_MENU_URL + id);
     const jsonData = await data.json();
-    // console.log(jsonData);
-    setRestaurantData(jsonData.data);
+    console.log(jsonData);
+    setRestaurantData(jsonData?.data?.cards[0]?.card?.card?.info);
+    // setRestaurantData(jsonData.data);
     // console.log(Object.values(jsonData?.data?.menu?.items));
-    setMenuItems(Object.values(jsonData?.data?.menu?.items));
-    setMenuItemWidget(Object.values(jsonData?.data?.menu?.widgets));
+    setMenuItems(Object.values(jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards));
+    // setMenuItemWidget(Object.values(jsonData?.data?.menu?.widgets));
     // console.log(Object.values(jsonData?.data?.menu?.widgets));
   };
+  console.log(menuItems);
 
   useEffect(() => {
     getRestaurantData();
@@ -37,7 +39,7 @@ const RestaurantMenu = () => {
       <RestaurantMenuDetailsCard restaurantData={restaurantData} />
       <RestaurantMenuItem
         menuItems={menuItems}
-        menuItemWidget={menuItemWidget}
+      // menuItemWidget={menuItemWidget}
       />
     </>
   ) : (

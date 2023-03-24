@@ -17,6 +17,7 @@ const cartSlice = createSlice({
             }
         },
         removeItem: (state, action) => {
+            console.log(action);
             if (state.items[action.payload.id].count > 1) {
                 state.items[action.payload.id]["count"] = --state.items[action.payload.id]["count"];
                 console.log("delete multi item - " + state.items[action.payload.id]["count"]);
